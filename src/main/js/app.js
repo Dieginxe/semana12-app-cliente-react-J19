@@ -22,15 +22,30 @@ class App extends React.Component {
 	render() {
 		return (
 			<>
-				<h2>Lista de Instrumentos</h2>
+				<h1>Semana 12 App</h1>
+				
 				<InstrumentoList instrumentos={this.state.instrumentos}/>
 				<hr />
 				<h2>Lista de Musicos</h2>
+				<hr/>
+				Lista completa de Musicos
 				<MusicoList musicos={this.state.musicos}/>
 
 			</>
 		)
 	}
+}
+
+const TituloInstrumentos = ()=>{
+	return( 
+
+		<>
+			<hr/>
+			<h2>Lista de Instrumentos</h2>
+			<hr/>
+			Lista completa de instrumentos
+		</>
+			)
 }
 
 class InstrumentoList extends React.Component{
