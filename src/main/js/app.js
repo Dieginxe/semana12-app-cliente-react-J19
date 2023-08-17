@@ -23,12 +23,9 @@ class App extends React.Component {
 		return (
 			<>
 				<h1>Semana 12 App</h1>
-				
+				<Titulo entidad="Instrumentos" emoji="🎸"/>
 				<InstrumentoList instrumentos={this.state.instrumentos}/>
-				<hr />
-				<h2>Lista de Musicos</h2>
-				<hr/>
-				Lista completa de Musicos
+				<Titulo entidad="Musicos" emoji="🎵"/>
 				<MusicoList musicos={this.state.musicos}/>
 
 			</>
@@ -36,14 +33,14 @@ class App extends React.Component {
 	}
 }
 
-const TituloInstrumentos = ()=>{
+const Titulo = (props)=>{
 	return( 
 
 		<>
-			<hr/>
-			<h2>Lista de Instrumentos</h2>
-			<hr/>
-			Lista completa de instrumentos
+				<hr/>
+				<h2>{props.emoji} {props.entidad}</h2>
+				<hr/>
+				Lista completa de {props.entidad.toLowerCase()}
 		</>
 			)
 }
